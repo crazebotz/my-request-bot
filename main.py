@@ -51,11 +51,12 @@ def broadcast(_, M):
 
     for u_id in users:
        total+=1
+       print(total) 
        User=(u_id["_id"])
        try:
         app.copy_message(User,cht, msg_id)
         success_count+=1
-        time.sleep(0.31)
+        time.sleep(0.20)
 
        except UserIsBlocked:
         failed_count+=1
@@ -74,7 +75,7 @@ def exit_cmd(_, M):
     os.remove("test.py")
     os._exit(1)
 
-button = [[InlineKeyboardButton(f"{ch1_title}", url=f"{ch1_link}")]]
+button = [[InlineKeyboardButton(f"{ch1_title}", url=f"{ch1_link}")],[InlineKeyboardButton(f"{ch2_title}", url=f"{ch2_link}")]]
 @app.on_chat_join_request()
 def reqs_handler(client: app, message: ChatJoinRequest):
     CHAT = message.chat
