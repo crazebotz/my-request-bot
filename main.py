@@ -68,6 +68,7 @@ def broadcast(_, M):
     M.reply_text(f"**Total:** {str(total)}\n**Success:** {str(success_count)}\n**Failed:** {str(failed_count)}")
 
 
+    
 
 @app.on_message(filters.regex('!!exit') & filters.user(sudo_users))
 def exit_cmd(_, M):
