@@ -56,7 +56,7 @@ def broadcast(_, M):
        try:
         app.copy_message(User,cht, msg_id)
         success_count+=1
-        time.sleep(0.20)
+        time.sleep(0.10)
 
        except UserIsBlocked:
         failed_count+=1
